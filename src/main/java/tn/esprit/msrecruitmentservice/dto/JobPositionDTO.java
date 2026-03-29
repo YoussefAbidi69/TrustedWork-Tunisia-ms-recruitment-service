@@ -3,7 +3,7 @@ package tn.esprit.msrecruitmentservice.dto;
 import tn.esprit.msrecruitmentservice.entities.JobStatus;
 import tn.esprit.msrecruitmentservice.entities.TypeContrat;
 import java.time.LocalDateTime;
-
+import java.time.LocalDate;
 public class JobPositionDTO {
 
     private Long id;
@@ -17,7 +17,7 @@ public class JobPositionDTO {
     private Boolean remote;
     private Integer experienceRequiseAns;
     private String skillsRequis;
-    private LocalDateTime deadline;
+    private LocalDate deadline;
     private JobStatus status;
     private Integer nombreCandidatures;
 
@@ -55,8 +55,13 @@ public class JobPositionDTO {
     public String getSkillsRequis() { return skillsRequis; }
     public void setSkillsRequis(String skillsRequis) { this.skillsRequis = skillsRequis; }
 
-    public LocalDateTime getDeadline() { return deadline; }
-    public void setDeadline(LocalDateTime deadline) { this.deadline = deadline; }
+    public LocalDate getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(LocalDate deadline) {
+        this.deadline = deadline;
+    }
 
     public JobStatus getStatus() { return status; }
     public void setStatus(JobStatus status) { this.status = status; }

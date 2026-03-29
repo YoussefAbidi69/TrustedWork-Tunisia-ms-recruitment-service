@@ -2,6 +2,7 @@ package tn.esprit.msrecruitmentservice.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -33,7 +34,7 @@ public class JobPosition {
     @Column(columnDefinition = "TEXT")
     private String skillsRequis;
 
-    private LocalDateTime deadline;
+    private LocalDate deadline;
 
     @Enumerated(EnumType.STRING)
     private JobStatus status;
